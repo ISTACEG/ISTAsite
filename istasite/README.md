@@ -1,3 +1,0 @@
-# colaborators
-
-bala
