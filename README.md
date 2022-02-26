@@ -1,4 +1,3 @@
 # colaborators
 
 bala
-Rohith
