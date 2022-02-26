@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'postClass.dart';
 
-class Projects extends StatefulWidget {
-  const Projects({Key? key}) : super(key: key);
+class search extends StatefulWidget {
+  const search({Key? key}) : super(key: key);
 
   @override
-  _ProjectsState createState() => _ProjectsState();
+  _search createState() => _search();
 }
 
-class _ProjectsState extends State<Projects> {
+class _search extends State<search> {
   final List<Post> _posts = [
     Post(
         'AR SHOPPING APP',
