@@ -190,7 +190,7 @@ class _ProjectsState extends State<Projects> {
                       child: Text(
                         'A-Z',
                         style: TextStyle(
-                          fontFamily: 'InterLight',
+                          fontFamily: 'InterBold',
                         ),
                       ),
                     )),
@@ -227,7 +227,7 @@ class _ProjectsState extends State<Projects> {
                   child: const Center(
                     child: Text(
                       'Latest-Oldest',
-                      style: TextStyle(fontFamily: 'InterLight'),
+                      style: TextStyle(fontFamily: 'InterBold'),
                     ),
                   )),
             ),
@@ -262,7 +262,7 @@ class _ProjectsState extends State<Projects> {
                   child: const Center(
                     child: Text(
                       'Oldest-Latest',
-                      style: TextStyle(fontFamily: 'InterLight'),
+                      style: TextStyle(fontFamily: 'InterBold'),
                     ),
                   )),
             ),
@@ -309,7 +309,7 @@ class _ProjectsState extends State<Projects> {
                               child: Center(
                                 child: Text(
                                   alltags[index],
-                                  style: TextStyle(fontFamily: 'InterLight'),
+                                  style: TextStyle(fontFamily: 'InterBold'),
                                 ),
                               )),
                         ),
@@ -373,7 +373,7 @@ class _ProjectsState extends State<Projects> {
                       child: const Center(
                         child: Text(
                           'A-Z',
-                          style: TextStyle(fontFamily: 'InterLight'),
+                          style: TextStyle(fontFamily: 'InterBold'),
                         ),
                       )),
                 ),
@@ -408,7 +408,7 @@ class _ProjectsState extends State<Projects> {
                             child: const Center(
                               child: Text(
                                 'Latest-Oldest',
-                                style: TextStyle(fontFamily: 'InterLight'),
+                                style: TextStyle(fontFamily: 'InterBold'),
                               ),
                             )),
                       )
@@ -449,7 +449,7 @@ class _ProjectsState extends State<Projects> {
                       child: const Center(
                         child: Text(
                           'Latest-Oldest',
-                          style: TextStyle(fontFamily: 'InterLight'),
+                          style: TextStyle(fontFamily: 'InterBold'),
                         ),
                       )),
                 ),
@@ -483,7 +483,7 @@ class _ProjectsState extends State<Projects> {
                 child: const Center(
                   child: Text(
                     'Oldest- Latest',
-                    style: TextStyle(fontFamily: 'InterLight'),
+                    style: TextStyle(fontFamily: 'InterBold'),
                   ),
                 )),
           ),
@@ -549,7 +549,7 @@ class _ProjectsState extends State<Projects> {
                                 child: Center(
                                   child: Text(
                                     alltags[index],
-                                    style: TextStyle(fontFamily: 'InterLight'),
+                                    style: TextStyle(fontFamily: 'InterBold'),
                                   ),
                                 )),
                           )
@@ -588,7 +588,7 @@ class _ProjectsState extends State<Projects> {
                                 child: Center(
                                   child: Text(
                                     alltags[index],
-                                    style: TextStyle(fontFamily: 'InterLight'),
+                                    style: TextStyle(fontFamily: 'InterBold'),
                                   ),
                                 )),
                           ),
@@ -684,7 +684,7 @@ class _ProjectsState extends State<Projects> {
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
                                           Icon(
-                                            Icons.ad_units_rounded,
+                                            Icons.code,
                                             size: 20,
                                           ),
                                           Container(
