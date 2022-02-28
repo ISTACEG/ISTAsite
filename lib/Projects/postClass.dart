@@ -6,6 +6,7 @@ class Post {
   final String imageurl;
   final String gitlink;
   final int time;
+  final List<Map<String, String>> contact;
   Post(
       {required this.title,
       required this.domain,
@@ -13,5 +14,6 @@ class Post {
       required this.description,
       required this.imageurl,
       required this.gitlink,
-      required this.time});
+      required this.time,
+      required this.contact});
 }

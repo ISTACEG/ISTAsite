@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:istasite/Projects/contactDialogbox.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'postClass.dart';
 
@@ -39,7 +40,24 @@ class _ProjectsState extends State<Projects> {
         imageurl:
             'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
         gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 2),
+        time: 2,
+        contact: [
+          {
+            'Name': 'Balasubramaniam M',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          }
+        ]),
     Post(
         title: 'AR SHOPPING APP 1',
         domain: 'tech stack',
@@ -49,7 +67,24 @@ class _ProjectsState extends State<Projects> {
         imageurl:
             'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
         gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 3),
+        time: 3,
+        contact: [
+          {
+            'Name': 'Balasubramaniam M',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          }
+        ]),
     Post(
         title: 'AR SHOPPING APP 2',
         domain: 'tech stack',
@@ -59,7 +94,24 @@ class _ProjectsState extends State<Projects> {
         imageurl:
             'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
         gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 4),
+        time: 4,
+        contact: [
+          {
+            'Name': 'Balasubramaniam M',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          }
+        ]),
     Post(
         title: 'AR SHOPPING APP 3',
         domain: 'tech stack',
@@ -69,7 +121,24 @@ class _ProjectsState extends State<Projects> {
         imageurl:
             'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
         gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 5),
+        time: 5,
+        contact: [
+          {
+            'Name': 'Balasubramaniam M',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          }
+        ]),
     Post(
         title: 'AR SHOPPING APP 4',
         domain: 'tech stack',
@@ -79,7 +148,24 @@ class _ProjectsState extends State<Projects> {
         imageurl:
             'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
         gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 0),
+        time: 0,
+        contact: [
+          {
+            'Name': 'Balasubramaniam M',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          }
+        ]),
     Post(
         title: 'AR SHOPPING APP 5',
         domain: 'tech stack',
@@ -89,7 +175,24 @@ class _ProjectsState extends State<Projects> {
         imageurl:
             'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
         gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 1)
+        time: 1,
+        contact: [
+          {
+            'Name': 'Balasubramaniam M',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          },
+          {
+            'Name': 'Balasubramaniam',
+            'Rollno': '2018115018',
+            'Contact': '6385490321'
+          }
+        ]),
   ];
 
   @override
@@ -745,23 +848,39 @@ class _ProjectsState extends State<Projects> {
                       ),
                       SizedBox(height: 10),
                       Container(
-                        child: InkWell(
-                          onTap: () async {
-                            await launch(
-                                "https://api.flutter.dev/flutter/material/Icons/arrow_forward-constant.html");
-                          },
-                          child: Row(
-                            children: [
-                              Text("View Project",
-                                  style: TextStyle(
+                        width: (width > 600)
+                            ? width * 0.68 * 0.9 * 0.9
+                            : width * 0.9 * 0.9 * 0.9,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: InkWell(
+                                onTap: () async {
+                                  await launch(
+                                      "https://api.flutter.dev/flutter/material/Icons/arrow_forward-constant.html");
+                                },
+                                child: Row(
+                                  children: [
+                                    Text("View Project",
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontFamily: 'InterBold')),
+                                    Icon(
+                                      Icons.arrow_forward,
                                       color: Colors.black,
-                                      fontFamily: 'InterBold')),
-                              Icon(
-                                Icons.arrow_forward,
-                                color: Colors.black,
-                              )
-                            ],
-                          ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                            IconButton(
+                                onPressed: () {
+                                  contactDialogBox(
+                                      context, width, height, post.contact);
+                                },
+                                icon: Icon(Icons.person))
+                          ],
                         ),
                       )
                     ],
@@ -863,6 +982,7 @@ class _ProjectsState extends State<Projects> {
                                       "Projects",
                                       style: TextStyle(
                                           fontFamily: 'HomemadeApple',
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 25,
                                           foreground: Paint()
                                             ..shader = LinearGradient(
