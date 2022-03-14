@@ -1,10 +1,21 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:istasite/Homepage/Homepage.dart';
 import 'package:istasite/InterviewExperience/InterviewExperience.dart';
 import 'package:istasite/Magazine/Magazine.dart';
 import 'package:istasite/Projects/Projects.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyBhh4duiBUI58vDAMt_HZloA285uTBr4C4",
+          authDomain: "istawebsite.firebaseapp.com",
+          projectId: "istawebsite",
+          storageBucket: "istawebsite.appspot.com",
+          messagingSenderId: "536058345928",
+          appId: "1:536058345928:web:4f46c573298462ed05e8fd",
+          measurementId: "G-LRN8V82658"));
   runApp(const MyApp());
 }
 
