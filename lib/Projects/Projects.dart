@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:istasite/Projects/contactDialogbox.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'postClass.dart';
+
 
 class Projects extends StatefulWidget {
   const Projects({Key? key}) : super(key: key);
@@ -924,6 +926,7 @@ class _ProjectsState extends State<Projects> {
 
   @override
   Widget build(BuildContext context) {
+
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -1059,5 +1062,6 @@ class _ProjectsState extends State<Projects> {
             ],
           ),
         ));
+
   }
 }
