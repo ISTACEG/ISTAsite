@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:istasite/Projects/Projects.dart';
+import 'package:istasite/Projects/Projectsform.dart';
 import 'package:istasite/auth.dart';
 import 'package:istasite/validate.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -100,8 +101,9 @@ class _LoginPageState extends State<LoginPage> {
                                     "name", _emailTextController.text);
                                 Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(
-                                    builder: (context) => Projects(),
-                                  ),
+                                      builder: (context) => Projectform()
+                                      //Projects(),
+                                      ),
                                 );
                                 //}
                               }

@@ -167,7 +167,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
-<<<<<<< HEAD
   flutter_speed_dial:
     dependency: "direct main"
     description:
@@ -182,7 +181,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.4"
-
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -463,7 +461,7 @@ packages:
       name: textfield_tags
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.4.2"
+    version: "1.4.4"
   typed_data:
     dependency: transitive
     description:

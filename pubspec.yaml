@@ -43,7 +43,6 @@ dependencies:
   syncfusion_flutter_pdfviewer: 
   flutter_speed_dial:
   shared_preferences:
-
   textfield_tags: ^1.4.2
   
 

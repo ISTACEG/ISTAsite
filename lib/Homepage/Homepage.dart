@@ -8,6 +8,7 @@ import 'package:istasite/Projects/Projects.dart';
 import 'package:istasite/login.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../Components/classes.dart';
 
@@ -291,12 +292,8 @@ class _HomepageState extends State<Homepage> {
             child: (magazinelist.isEmpty)
                 ? Center(child: CircularProgressIndicator())
                 : InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MagazinePage(
-                                  file_url: magazinelist[0].file_url)));
+                    onTap: () async {
+                      await launch(magazinelist[0].file_url);
                     },
                     child: Image(image: AssetImage(magazinelist[0].cover_url))),
           ),
@@ -324,17 +321,9 @@ class _HomepageState extends State<Homepage> {
                                     children: [
                                       Container(
                                         child: InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        MagazinePage(
-                                                            file_url:
-                                                                magazinelist[
-                                                                        index +
-                                                                            1]
-                                                                    .file_url)));
+                                          onTap: () async {
+                                            await launch(magazinelist[index + 1]
+                                                .file_url);
                                           },
                                           child: Image(
                                             image: AssetImage(
