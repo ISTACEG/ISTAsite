@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MainPage(),
+      home: const Homepage(),
     );
   }
 }
@@ -63,13 +63,13 @@ class _MainPageState extends State<MainPage> {
                       MaterialPageRoute(builder: (context) => Projects()));
                 },
                 child: Text("Projects")),
-            SizedBox(width: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Magazine()));
-                },
-                child: Text("Magazine")),
+            // SizedBox(width: 10),
+            // ElevatedButton(
+            //     onPressed: () {
+            //       Navigator.push(context,
+            //           MaterialPageRoute(builder: (context) => MagazinePage()));
+            //     },
+            //     child: Text("Magazine")),
             SizedBox(width: 10),
             ElevatedButton(
                 onPressed: () {

@@ -1,15 +1,15 @@
 class Post {
+  final String projectId;
   final String title;
   final String description;
-  final String domain;
-  final List<String> tags;
+  final List<dynamic> tags;
   final String imageurl;
   final String gitlink;
   final int time;
-  final List<Map<String, String>> contact;
+  final List<dynamic> contact;
   Post(
-      {required this.title,
-      required this.domain,
+      {required this.projectId,
+      required this.title,
       required this.tags,
       required this.description,
       required this.imageurl,

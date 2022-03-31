@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-Future contactDialogBox(BuildContext context, double width, double height,
-    List<Map<String, String>> contact) {
+Future contactDialogBox(
+    BuildContext context, double width, double height, List<dynamic> contact) {
   return showDialog(
       context: context,
       builder: (context) {

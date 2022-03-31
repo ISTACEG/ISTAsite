@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:istasite/Homepage/Homepage.dart';
+import 'package:istasite/InterviewExperience/InterviewExperience.dart';
 import 'package:istasite/Projects/contactDialogbox.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'postClass.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Projects extends StatefulWidget {
   const Projects({Key? key}) : super(key: key);
@@ -30,187 +34,212 @@ class _ProjectsState extends State<Projects> {
   //   'Data Analysis',
   //   'Deep Learning',
   // ];
-  final List<Post> _posts = [
-    Post(
-        title: 'AR SHOPPING APP 0',
-        domain: 'tech stack',
-        tags: ['Machine Learning', 'flutter'],
-        description:
-            'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
-        imageurl:
-            'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
-        gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 2,
-        contact: [
-          {
-            'Name': 'Balasubramaniam M',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          }
-        ]),
-    Post(
-        title: 'AR SHOPPING APP 1',
-        domain: 'tech stack',
-        tags: ['Virtual Reality', 'flutter'],
-        description:
-            'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
-        imageurl:
-            'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
-        gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 3,
-        contact: [
-          {
-            'Name': 'Balasubramaniam M',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          }
-        ]),
-    Post(
-        title: 'AR SHOPPING APP 2',
-        domain: 'tech stack',
-        tags: ['Augmented Reality', 'flutter'],
-        description:
-            'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
-        imageurl:
-            'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
-        gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 4,
-        contact: [
-          {
-            'Name': 'Balasubramaniam M',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          }
-        ]),
-    Post(
-        title: 'AR SHOPPING APP 3',
-        domain: 'tech stack',
-        tags: ['Data Analysis', 'flutter'],
-        description:
-            'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
-        imageurl:
-            'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
-        gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 5,
-        contact: [
-          {
-            'Name': 'Balasubramaniam M',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          }
-        ]),
-    Post(
-        title: 'AR SHOPPING APP 4',
-        domain: 'tech stack',
-        tags: ['Machine Learning', 'flutter'],
-        description:
-            'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
-        imageurl:
-            'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
-        gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 0,
-        contact: [
-          {
-            'Name': 'Balasubramaniam M',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          }
-        ]),
-    Post(
-        title: 'AR SHOPPING APP 5',
-        domain: 'tech stack',
-        tags: ['Machine Learning', 'Augmented Reality'],
-        description:
-            'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
-        imageurl:
-            'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
-        gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
-        time: 1,
-        contact: [
-          {
-            'Name': 'Balasubramaniam M',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          },
-          {
-            'Name': 'Balasubramaniam',
-            'Rollno': '2018115018',
-            'Contact': '6385490321'
-          }
-        ]),
-  ];
+  List<Post> posts = [];
+  //   Post(
+  //       title: 'AR SHOPPING APP 0',
+  //       domain: 'tech stack',
+  //       tags: ['Machine Learning', 'flutter'],
+  //       description:
+  //           'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
+  //       imageurl:
+  //           'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
+  //       gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
+  //       time: 2,
+  //       contact: [
+  //         {
+  //           'Name': 'Balasubramaniam M',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         }
+  //       ]),
+  //   Post(
+  //       title: 'AR SHOPPING APP 1',
+  //       domain: 'tech stack',
+  //       tags: ['Virtual Reality', 'flutter'],
+  //       description:
+  //           'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
+  //       imageurl:
+  //           'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
+  //       gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
+  //       time: 3,
+  //       contact: [
+  //         {
+  //           'Name': 'Balasubramaniam M',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         }
+  //       ]),
+  //   Post(
+  //       title: 'AR SHOPPING APP 2',
+  //       domain: 'tech stack',
+  //       tags: ['Augmented Reality', 'flutter'],
+  //       description:
+  //           'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
+  //       imageurl:
+  //           'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
+  //       gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
+  //       time: 4,
+  //       contact: [
+  //         {
+  //           'Name': 'Balasubramaniam M',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         }
+  //       ]),
+  //   Post(
+  //       title: 'AR SHOPPING APP 3',
+  //       domain: 'tech stack',
+  //       tags: ['Data Analysis', 'flutter'],
+  //       description:
+  //           'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
+  //       imageurl:
+  //           'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
+  //       gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
+  //       time: 5,
+  //       contact: [
+  //         {
+  //           'Name': 'Balasubramaniam M',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         }
+  //       ]),
+  //   Post(
+  //       title: 'AR SHOPPING APP 4',
+  //       domain: 'tech stack',
+  //       tags: ['Machine Learning', 'flutter'],
+  //       description:
+  //           'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
+  //       imageurl:
+  //           'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
+  //       gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
+  //       time: 0,
+  //       contact: [
+  //         {
+  //           'Name': 'Balasubramaniam M',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         }
+  //       ]),
+  //   Post(
+  //       title: 'AR SHOPPING APP 5',
+  //       domain: 'tech stack',
+  //       tags: ['Machine Learning', 'Augmented Reality'],
+  //       description:
+  //           'Cart is an AR-based E-Shopping Mobile Application. The main idea is to narrow down the gap between reality shopping and e-shopping by using Augmented Reality. Users are allowed to try out available merchandise and can also superimpose 3D products bound to their environment before buying. This builds trust and adds value to the business at less cost. ',
+  //       imageurl:
+  //           'https://sopa.tulane.edu/sites/sopa.tulane.edu/files/tulane-sopa-vr-blog-photo.jpeg',
+  //       gitlink: 'https://github.com/ISTACEG/ISTAsite/tree/main',
+  //       time: 1,
+  //       contact: [
+  //         {
+  //           'Name': 'Balasubramaniam M',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         },
+  //         {
+  //           'Name': 'Balasubramaniam',
+  //           'Rollno': '2018115018',
+  //           'Contact': '6385490321'
+  //         }
+  //       ]),
+  // ];
 
   @override
   void initState() {
     super.initState();
+    fetchprojects();
+  }
+
+  void fetchprojects() async {
+    List<Post> projects = [];
+    await FirebaseFirestore.instance
+        .collection("Projects")
+        .get()
+        .then((snapshot) {
+      snapshot.docs.forEach((element) {
+        projects.add(Post(
+            projectId: element.data()['ProjectId'],
+            title: element.data()['Title'],
+            description: element.data()['Description'],
+            tags: element.data()['Tags'],
+            imageurl: element.data()['Image_url'],
+            gitlink: element.data()['Git_url'],
+            time: element.data()['YearOfCompletion'] * 10 +
+                element.data()['MonthOfCompletion'],
+            contact: element.data()['Team']));
+      });
+      setState(() {
+        posts = projects;
+      });
+    });
     setState(() {
-      _foundposts = _posts;
-      for (int i = 0; i < _posts.length; i++)
-        for (int j = 0; j < _posts[i].tags.length; j++)
-          if (!alltags.contains(_posts[i].tags[j]))
-            alltags.add(_posts[i].tags[j]);
+      _foundposts = posts;
+      for (int i = 0; i < posts.length; i++)
+        for (int j = 0; j < posts[i].tags.length; j++)
+          if (!alltags.contains(posts[i].tags[j]))
+            alltags.add(posts[i].tags[j]);
       for (int i = 0; i < alltags.length; i++) taglist.add(false);
     });
   }
 
   onSearch(String search) {
     setState(() {
-      _foundposts = _posts
+      _foundposts = posts
           .where((post) =>
               post.title.toLowerCase().contains(search.toLowerCase()) ||
               post.description.toLowerCase().contains(search.toLowerCase()))
@@ -238,12 +267,12 @@ class _ProjectsState extends State<Projects> {
     if (tag == "All") {
       setState(() {
         tagSelected = tag;
-        _foundposts = _posts;
+        _foundposts = posts;
       });
     } else {
       setState(() {
         tagSelected = tag;
-        _foundposts = _posts.where((post) => post.tags.contains(tag)).toList();
+        _foundposts = posts.where((post) => post.tags.contains(tag)).toList();
       });
     }
   }
@@ -753,7 +782,7 @@ class _ProjectsState extends State<Projects> {
                             : (width > 600)
                                 ? width * 0.9 * 0.9 * 0.68
                                 : width * 0.9 * 0.9 * 0.9,
-                        child: Text(post.title + " #${post.time}",
+                        child: Text(post.title,
                             style: TextStyle(
                                 fontSize: 20, fontFamily: 'InterBold')),
                       ),
@@ -922,142 +951,187 @@ class _ProjectsState extends State<Projects> {
     );
   }
 
+  ValueNotifier<bool> isDialOpen = ValueNotifier(false);
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    return Scaffold(
-        key: _scaffoldKey,
-        drawer: Hamburger(context, width, height),
-        body: Container(
-          width: width,
-          height: height,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                width: (width > 600) ? width * 0.68 : width * 0.9,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    (width > 600)
-                        ? Container(
-                            width: (width > 600)
-                                ? width * 0.68 * 0.9
-                                : width * 0.9 * 0.9,
-                            child: Text(
-                              "Projects",
-                              style: TextStyle(
-                                  fontSize: 25,
-                                  fontFamily: 'HomemadeApple',
-                                  fontWeight: FontWeight.w600,
-                                  foreground: Paint()
-                                    ..shader = LinearGradient(
-                                      colors: <Color>[
-                                        Color(0xff068293),
-                                        Color(0xff00a7a7),
-                                        Color(0xff00c366)
-                                      ],
-                                    ).createShader(
-                                        Rect.fromLTWH(0.0, 0.0, 200.0, 70.0))),
-                            ))
-                        : Container(
-                            width: (width > 600)
-                                ? width * 0.68 * 0.9
-                                : width * 0.9 * 0.9,
-                            child: Row(
+    return (posts.isEmpty)
+        ? Center(
+            child: Container(
+                width: 20, height: 20, child: CircularProgressIndicator()))
+        : Scaffold(
+            key: _scaffoldKey,
+            drawer: Hamburger(context, width, height),
+            body: Container(
+              width: width,
+              height: height,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: (width > 600) ? width * 0.68 : width * 0.9,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        (width > 600)
+                            ? Container(
+                                width: (width > 600)
+                                    ? width * 0.68 * 0.9
+                                    : width * 0.9 * 0.9,
+                                child: Text(
+                                  "Projects",
+                                  style: TextStyle(
+                                      fontSize: 25,
+                                      fontFamily: 'HomemadeApple',
+                                      fontWeight: FontWeight.w600,
+                                      foreground: Paint()
+                                        ..shader = LinearGradient(
+                                          colors: <Color>[
+                                            Color(0xff068293),
+                                            Color(0xff00a7a7),
+                                            Color(0xff00c366)
+                                          ],
+                                        ).createShader(Rect.fromLTWH(
+                                            0.0, 0.0, 200.0, 70.0))),
+                                ))
+                            : Container(
+                                width: (width > 600)
+                                    ? width * 0.68 * 0.9
+                                    : width * 0.9 * 0.9,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                        onPressed: () {
+                                          _scaffoldKey.currentState
+                                              ?.openDrawer();
+                                        },
+                                        icon: Icon(Icons.menu)),
+                                    Container(
+                                      width: (width > 600)
+                                          ? width * 0.68 * 0.9
+                                          : width * 0.9 * 0.7,
+                                      child: Center(
+                                        child: Text(
+                                          "Projects",
+                                          style: TextStyle(
+                                              fontFamily: 'HomemadeApple',
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 25,
+                                              foreground: Paint()
+                                                ..shader = LinearGradient(
+                                                  colors: <Color>[
+                                                    Color(0xff068293),
+                                                    Color(0xff00a7a7),
+                                                    Color(0xff00c366)
+                                                  ],
+                                                ).createShader(Rect.fromLTWH(
+                                                    0.0, 0.0, 200.0, 70.0))),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                )),
+                        searchBar(width, height),
+                        Container(
+                          width: (width > 600)
+                              ? width * 0.68 * 0.9
+                              : width * 0.9 * 0.9,
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                IconButton(
-                                    onPressed: () {
-                                      _scaffoldKey.currentState?.openDrawer();
-                                    },
-                                    icon: Icon(Icons.menu)),
+                                Icon(Icons.arrow_downward),
                                 Container(
                                   width: (width > 600)
-                                      ? width * 0.68 * 0.9
-                                      : width * 0.9 * 0.7,
-                                  child: Center(
-                                    child: Text(
-                                      "Projects",
-                                      style: TextStyle(
-                                          fontFamily: 'HomemadeApple',
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 25,
-                                          foreground: Paint()
-                                            ..shader = LinearGradient(
-                                              colors: <Color>[
-                                                Color(0xff068293),
-                                                Color(0xff00a7a7),
-                                                Color(0xff00c366)
-                                              ],
-                                            ).createShader(Rect.fromLTWH(
-                                                0.0, 0.0, 200.0, 70.0))),
-                                    ),
+                                      ? width * 0.68 * 0.8
+                                      : width * 0.9 * 0.8,
+                                  child: Text(
+                                    "Showing ${_foundposts.length} results for ${tagSelected}",
+                                    style: TextStyle(
+                                        fontFamily: 'InterLight',
+                                        fontWeight: FontWeight.w500),
                                   ),
-                                ),
-                              ],
-                            )),
-                    searchBar(width, height),
-                    Container(
-                      width: (width > 600)
-                          ? width * 0.68 * 0.9
-                          : width * 0.9 * 0.9,
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.arrow_downward),
-                            Container(
-                              width: (width > 600)
-                                  ? width * 0.68 * 0.8
-                                  : width * 0.9 * 0.8,
-                              child: Text(
-                                "Showing ${_foundposts.length} results for ${tagSelected}",
-                                style: TextStyle(
-                                    fontFamily: 'InterLight',
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            )
-                          ]),
-                    ),
-                    Container(
-                        width: (width > 600) ? width * 0.68 : width * 0.9,
-                        height: height * 0.8,
-                        // child: _foundposts.length > 0
-                        //     ?
-                        child: Center(
-                          child: ListView.builder(
-                              shrinkWrap: true,
-                              scrollDirection: Axis.vertical,
-                              itemCount: _foundposts.length,
-                              itemBuilder: (context, index) {
-                                return postComponent(
-                                    _foundposts[index], width, height);
-                              }),
-                        )
-                        // : Center(
-                        //     child: Text(
-                        //     "No Projects found",
-                        //   )),
+                                )
+                              ]),
                         ),
-                  ],
-                ),
+                        Container(
+                            width: (width > 600) ? width * 0.68 : width * 0.9,
+                            height: height * 0.8,
+                            // child: _foundposts.length > 0
+                            //     ?
+                            child: Center(
+                              child: ListView.builder(
+                                  shrinkWrap: true,
+                                  scrollDirection: Axis.vertical,
+                                  itemCount: _foundposts.length,
+                                  itemBuilder: (context, index) {
+                                    return postComponent(
+                                        _foundposts[index], width, height);
+                                  }),
+                            )
+                            // : Center(
+                            //     child: Text(
+                            //     "No Projects found",
+                            //   )),
+                            ),
+                      ],
+                    ),
+                  ),
+                  (width > 600)
+                      ? Container(
+                          width: width * 0.28,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Sort(width, height, context),
+                              SizedBox(height: 15),
+                              tag(width, height, context)
+                            ],
+                          ),
+                        )
+                      : Container()
+                ],
               ),
-              (width > 600)
-                  ? Container(
-                      width: width * 0.28,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Sort(width, height, context),
-                          SizedBox(height: 15),
-                          tag(width, height, context)
-                        ],
-                      ),
-                    )
-                  : Container()
-            ],
-          ),
-        ));
+            ),
+            floatingActionButton: SpeedDial(
+              animatedIcon: AnimatedIcons.menu_close,
+              openCloseDial: isDialOpen,
+              backgroundColor: Colors.black,
+              overlayColor: Colors.grey,
+              overlayOpacity: 0.5,
+              spacing: 15,
+              spaceBetweenChildren: 15,
+              closeManually: true,
+              children: [
+                SpeedDialChild(
+                    child: Icon(Icons.home),
+                    label: "Home",
+                    onTap: () {
+                      isDialOpen.value = false;
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Homepage()));
+                    }),
+                SpeedDialChild(
+                    child: Icon(Icons.book),
+                    label: "Magazine",
+                    onTap: () {
+                      isDialOpen.value = false;
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Homepage()));
+                    }),
+                SpeedDialChild(
+                    child: Icon(Icons.emoji_emotions),
+                    label: "Interview Experience",
+                    onTap: () {
+                      isDialOpen.value = false;
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => InterviewExperience()));
+                    }),
+              ],
+            ),
+          );
   }
 }
