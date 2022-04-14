@@ -760,7 +760,7 @@ class _ProjectsState extends State<Projects> {
                       child: Center(
                         child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.asset("assets/bg.jpg")),
+                            child: Image.asset("assets/bg.png")),
                       ),
                     )
                   : Container(),
@@ -852,7 +852,7 @@ class _ProjectsState extends State<Projects> {
                                   child: Center(
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20),
-                                      child: Image.asset("assets/bg.jpg"),
+                                      child: Image.asset("assets/bg.png"),
                                     ),
                                   ),
                                 ),
