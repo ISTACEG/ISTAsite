@@ -38,12 +38,13 @@ dependencies:
   flappy_search_bar:
   firebase_core:
   cloud_firestore:
-  firebase_auth:
+  firebase_storage:
   palette_generator:
   syncfusion_flutter_pdfviewer: 
   flutter_speed_dial:
   shared_preferences:
   textfield_tags: ^1.4.2
+  hovering: ^1.0.4
   
 
 

@@ -5,6 +5,7 @@ import 'package:istasite/InterviewExperience/InterviewExperience.dart';
 
 import 'package:istasite/Projects/contactDialogbox.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../InterviewExperience/InterviewExpPage1.dart';
 import 'postClass.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -758,11 +759,8 @@ class _ProjectsState extends State<Projects> {
                           borderRadius: BorderRadius.circular(20)),
                       child: Center(
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image(
-                            image: NetworkImage(post.imageurl),
-                          ),
-                        ),
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.asset("assets/bg.jpg")),
                       ),
                     )
                   : Container(),
@@ -802,7 +800,7 @@ class _ProjectsState extends State<Projects> {
                         child: ListView.builder(
                             shrinkWrap: true,
                             scrollDirection: Axis.horizontal,
-                            itemCount: 2,
+                            itemCount: post.tags.length,
                             itemBuilder: (context, tagindex) {
                               return Row(
                                 children: [
@@ -854,9 +852,7 @@ class _ProjectsState extends State<Projects> {
                                   child: Center(
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20),
-                                      child: Image(
-                                        image: NetworkImage(post.imageurl),
-                                      ),
+                                      child: Image.asset("assets/bg.jpg"),
                                     ),
                                   ),
                                 ),
@@ -887,8 +883,7 @@ class _ProjectsState extends State<Projects> {
                             Container(
                               child: InkWell(
                                 onTap: () async {
-                                  await launch(
-                                      "https://api.flutter.dev/flutter/material/Icons/arrow_forward-constant.html");
+                                  await launch(post.gitlink);
                                 },
                                 child: Row(
                                   children: [
@@ -1126,10 +1121,8 @@ class _ProjectsState extends State<Projects> {
                     label: "Interview Experience",
                     onTap: () {
                       isDialOpen.value = false;
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => InterviewExperience()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Interview()));
                     }),
               ],
             ),

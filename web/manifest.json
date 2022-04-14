@@ -20,6 +20,11 @@
             "type": "image/png"
         },
         {
+            "src": "icons/ISTAlogo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
             "src": "icons/Icon-maskable-192.png",
             "sizes": "192x192",
             "type": "image/png",

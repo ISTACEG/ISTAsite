@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:istasite/Projects/Projects.dart';
 import 'package:istasite/Projects/Projectsform.dart';
-import 'package:istasite/auth.dart';
-import 'package:istasite/validate.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
@@ -101,11 +98,9 @@ class _LoginPageState extends State<LoginPage> {
                                     "name", _emailTextController.text);
                                 Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(
-                                      builder: (context) => Projectform()
-                                      //Projects(),
-                                      ),
+                                    builder: (context) => Projects(),
+                                  ),
                                 );
-                                //}
                               }
                             },
                             child: Text(
@@ -113,7 +108,8 @@ class _LoginPageState extends State<LoginPage> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
-                                  fontWeight: FontWeight.bold),
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'InterBold'),
                             ),
                           ),
                         ),
