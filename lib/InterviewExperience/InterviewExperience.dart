@@ -185,7 +185,7 @@ class MyCardWidget extends StatelessWidget {
                     alignment: Alignment.center,
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: Image.asset('download.png')),
+                        child: Image.asset('assets/download.png')),
                   ),
                 ),
                 title: Text(data.studentName,
@@ -230,7 +230,7 @@ class Header extends StatelessWidget {
       Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("background.png"),
+                image: AssetImage("assets/background.png"),
                 fit: BoxFit.fill,
               ),
               borderRadius: BorderRadius.only(

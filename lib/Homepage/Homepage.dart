@@ -50,116 +50,116 @@ class _HomepageState extends State<Homepage> {
         id: 1,
         name: "Dr.S.Swamynathan",
         role: "President",
-        imgurl: "OB/Swamynathan.jpg",
+        imgurl: "assets/OB/Swamynathan.jpg",
         contact: ""),
     OfficeBearer(
         id: 2,
         name: "Dr.N.Thangaraj",
         role: "Staff Treasurer",
-        imgurl: "OB/Thangaraj.jpg",
+        imgurl: "assets/OB/Thangaraj.jpg",
         contact: "https://www.linkedin.com/in/thangaraj-n-17570027/"),
     OfficeBearer(
         id: 3,
         name: "Adhis H",
         role: "Chairman",
-        imgurl: "OB/Adhis.jpg",
+        imgurl: "assets/OB/Adhis.jpg",
         contact: "https://www.linkedin.com/in/adhis-hariharadas-9b90b7184"),
     OfficeBearer(
         id: 4,
         name: "Ragul B",
         role: "Student Treasurer",
-        imgurl: "OB/Ragul.jpg",
+        imgurl: "assets/OB/Ragul.jpg",
         contact: "https://www.linkedin.com/mwlite/in/ragul-babu-130356191"),
     OfficeBearer(
         id: 5,
         name: "Balasubramaniam M",
         role: "Overall Coordinator",
-        imgurl: "OB/Bala.jpg",
+        imgurl: "assets/OB/Bala.jpg",
         contact: "https://www.linkedin.com/in/balasubramaniam-m-605ab1201/"),
     OfficeBearer(
         id: 6,
         name: "Lavanya S",
         role: "Web Development & Design Head",
-        imgurl: "OB/Lavanya.jpg",
+        imgurl: "assets/OB/Lavanya.jpg",
         contact: "https://www.linkedin.com/in/lavanya-s-02ab20199"),
     OfficeBearer(
         id: 7,
         name: "Murugan A",
         role: "Web Development & Design Head",
-        imgurl: "OB/Murugan.jpg",
+        imgurl: "assets/OB/Murugan.jpg",
         contact: "https://www.linkedin.com/in/murugan2000/"),
     OfficeBearer(
         id: 8,
         name: "Hariharan S",
         role: "Programming Head",
-        imgurl: "OB/Hariharan.png",
+        imgurl: "assets/OB/Hariharan.png",
         contact: "https://www.linkedin.com/in/hariharan-srinivasan-32b140195"),
     OfficeBearer(
         id: 9,
         name: "Hrithik K",
         role: "Programming Head",
-        imgurl: "OB/Hrithik.jpg",
+        imgurl: "assets/OB/Hrithik.jpg",
         contact:
             "https://www.linkedin.com/mwlite/in/hrithik-karthikeyan-5440601a8"),
     OfficeBearer(
         id: 10,
         name: "Shankar Subramanian",
         role: "News Letter Head",
-        imgurl: "OB/Shankar.jpg",
+        imgurl: "assets/OB/Shankar.jpg",
         contact: "https://www.linkedin.com/in/shankars99/"),
     OfficeBearer(
         id: 11,
         name: "Kevin Paul",
         role: "Documentation Head",
-        imgurl: "OB/Kevin.jpg",
+        imgurl: "assets/OB/Kevin.jpg",
         contact: "https://www.linkedin.com/in/thekevinpaul/"),
     OfficeBearer(
         id: 12,
         name: "Venkat Karthick P",
         role: "Placement Training Coordinator",
-        imgurl: "OB/Venkat.jpg",
+        imgurl: "assets/OB/Venkat.jpg",
         contact: "https://www.linkedin.com/in/venkat-karthick-4a5101200"),
     OfficeBearer(
         id: 13,
         name: "Sushrut Vinayak K",
         role: "Internship Training Coordinator",
-        imgurl: "OB/sushrut.jpg",
+        imgurl: "assets/OB/sushrut.jpg",
         contact: "https://www.linkedin.com/in/sushrut-vinayak-7323041b5/"),
     OfficeBearer(
         id: 14,
         name: "Nauvyashree Anbarasan",
         role: "Marketing Head",
-        imgurl: "OB/Nauvyashree.jpg",
+        imgurl: "assets/OB/Nauvyashree.jpg",
         contact: "https://linktr.ee/Nauvya"),
     OfficeBearer(
         id: 15,
         name: "Dhrisha G",
         role: "Industrial Relations",
-        imgurl: "OB/Dhrisha.jpg",
+        imgurl: "assets/OB/Dhrisha.jpg",
         contact: "https://in.linkedin.com/in/dhrisha-ganesan-08953a186"),
     OfficeBearer(
         id: 16,
         name: "Raghav Swaminathan",
         role: "Industrial Relations",
-        imgurl: "OB/Raghav.jpg",
+        imgurl: "assets/OB/Raghav.jpg",
         contact: "https://www.linkedin.com/in/raghav-swaminathan-9714b0192"),
     OfficeBearer(
         id: 17,
         name: "Jeevesh Guha Natrajan",
         role: "Co-Chairman",
-        imgurl: "OB/Jeevesh.jpg",
+        imgurl: "assets/OB/Jeevesh.jpg",
         contact: "https://instagram.com/jeevguha?r=nametag"),
     OfficeBearer(
         id: 18,
         name: "Praveen R",
         role: "General Secretary",
-        imgurl: "OB/Praveen.png",
+        imgurl: "assets/OB/Praveen.png",
         contact: "https://www.linkedin.com/mwlite/in/praveen-ramesh-007919214"),
     OfficeBearer(
         id: 19,
         name: "Dhanya Venkateswaran",
         role: "Deputy Secretary",
-        imgurl: "OB/Dhanya.jpg",
+        imgurl: "assets/OB/Dhanya.jpg",
         contact: "https://www.linkedin.com/in/dhanya-venkateswaran-1559b5188/"),
   ];
 
@@ -257,7 +257,7 @@ class _HomepageState extends State<Homepage> {
                       child: Center(
                         child: ClipRRect(
                             borderRadius: BorderRadius.circular(40),
-                            child: Image.asset("department_home.jpg")),
+                            child: Image.asset("assets/department_home.jpg")),
                       )
                       // Center(child: Text("Horse"))
                       ),
@@ -499,94 +499,118 @@ class _HomepageState extends State<Homepage> {
   }
 
   Widget project(double width, double height) {
-    return Stack(children: [
-      Center(
-        child: Container(
-          width: width * 0.9,
-          // height: height * 0.9,
-          child: Center(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(60),
-              child: InkWell(
-                  onTap: () {
-                    if (name != "")
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Projects()));
-                    else
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => LoginPage()));
-                  },
-                  child:
-                      Image(image: AssetImage("assets/MainProjectScreen.png"))),
+    return Column(
+      children: [
+        (width < 600)
+            ? InkWell(
+                onTap: () {
+                  if (name != "")
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Projects()));
+                  else
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginPage()));
+                },
+                child: Text("Projects ->",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "InterBold")))
+            : Container(),
+        Stack(children: [
+          Center(
+            child: Container(
+              width: width * 0.9,
+              // height: height * 0.9,
+              child: Center(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(60),
+                  child: InkWell(
+                      onTap: () {
+                        if (name != "")
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Projects()));
+                        else
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPage()));
+                      },
+                      child: Image(
+                          image: AssetImage("assets/MainProjectScreen.png"))),
+                ),
+              ),
             ),
-          ),
-        ),
-      )
-      // (imgsize != null)
-      //     ? Center(
-      //         child: ClipRRect(
-      //           borderRadius: BorderRadius.circular(60),
-      //           child: Container(
-      //             width: imgsize.width,
-      //             height: imgsize.height,
-      //             decoration: BoxDecoration(
-      //                 gradient: LinearGradient(
-      //                     begin: Alignment.topCenter,
-      //                     end: Alignment.bottomCenter,
-      //                     colors: [
-      //                   Color.fromRGBO(0, 0, 0, 0),
-      //                   Color.fromRGBO(0, 0, 0, 0.5),
-      //                   Color.fromRGBO(0, 0, 0, 0.5),
-      //                   Color.fromRGBO(0, 0, 0, 0.9),
-      //                 ])),
-      //           ),
-      //         ),
-      //       )
-      //     : Container(),
-      // (imgsize != null)
-      //     ? Center(
-      //         child: Container(
-      //             padding: EdgeInsets.only(right: 50, bottom: 20),
-      //             alignment: Alignment.bottomRight,
-      //             width: imgsize.width,
-      //             height: imgsize.height,
-      //             child: InkWell(
-      //               onTap: () {
-      //                 Navigator.push(
-      //                     context,
-      //                     MaterialPageRoute(
-      //                         builder: (context) =>
-      //                             MyHomePage(title: "Dashboard")));
-      //               },
-      //               child: Container(
-      //                 padding: EdgeInsets.only(right: 50, bottom: 20),
-      //                 width: imgsize.width * 0.3,
-      //                 height: imgsize.height * 0.2,
-      //                 color: Colors.red,
-      //                 child: Column(
-      //                   mainAxisAlignment: MainAxisAlignment.end,
-      //                   crossAxisAlignment: CrossAxisAlignment.end,
-      //                   children: [
-      //                     Text(
-      //                       "PROJECTS",
-      //                       style: TextStyle(
-      //                           fontSize: (width > 600) ? 23 : 18,
-      //                           color: Colors.black),
-      //                     ),
-      //                     SizedBox(height: 5),
-      //                     Text(
-      //                       "Explore All -->",
-      //                       style: TextStyle(
-      //                           fontSize: (width > 600) ? 18 : 12,
-      //                           color: Colors.black),
-      //                     )
-      //                   ],
-      //                 ),
-      //               ),
-      //             )),
-      //       )
-      //     : Container()
-    ]);
+          )
+          // (imgsize != null)
+          //     ? Center(
+          //         child: ClipRRect(
+          //           borderRadius: BorderRadius.circular(60),
+          //           child: Container(
+          //             width: imgsize.width,
+          //             height: imgsize.height,
+          //             decoration: BoxDecoration(
+          //                 gradient: LinearGradient(
+          //                     begin: Alignment.topCenter,
+          //                     end: Alignment.bottomCenter,
+          //                     colors: [
+          //                   Color.fromRGBO(0, 0, 0, 0),
+          //                   Color.fromRGBO(0, 0, 0, 0.5),
+          //                   Color.fromRGBO(0, 0, 0, 0.5),
+          //                   Color.fromRGBO(0, 0, 0, 0.9),
+          //                 ])),
+          //           ),
+          //         ),
+          //       )
+          //     : Container(),
+          // (imgsize != null)
+          //     ? Center(
+          //         child: Container(
+          //             padding: EdgeInsets.only(right: 50, bottom: 20),
+          //             alignment: Alignment.bottomRight,
+          //             width: imgsize.width,
+          //             height: imgsize.height,
+          //             child: InkWell(
+          //               onTap: () {
+          //                 Navigator.push(
+          //                     context,
+          //                     MaterialPageRoute(
+          //                         builder: (context) =>
+          //                             MyHomePage(title: "Dashboard")));
+          //               },
+          //               child: Container(
+          //                 padding: EdgeInsets.only(right: 50, bottom: 20),
+          //                 width: imgsize.width * 0.3,
+          //                 height: imgsize.height * 0.2,
+          //                 color: Colors.red,
+          //                 child: Column(
+          //                   mainAxisAlignment: MainAxisAlignment.end,
+          //                   crossAxisAlignment: CrossAxisAlignment.end,
+          //                   children: [
+          //                     Text(
+          //                       "PROJECTS",
+          //                       style: TextStyle(
+          //                           fontSize: (width > 600) ? 23 : 18,
+          //                           color: Colors.black),
+          //                     ),
+          //                     SizedBox(height: 5),
+          //                     Text(
+          //                       "Explore All -->",
+          //                       style: TextStyle(
+          //                           fontSize: (width > 600) ? 18 : 12,
+          //                           color: Colors.black),
+          //                     )
+          //                   ],
+          //                 ),
+          //               ),
+          //             )),
+          //       )
+          //     : Container()
+        ]),
+      ],
+    );
   }
 
   Widget interview(double width, double height) {
