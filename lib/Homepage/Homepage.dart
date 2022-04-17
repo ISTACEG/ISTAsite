@@ -105,7 +105,7 @@ class _HomepageState extends State<Homepage> {
         id: 10,
         name: "Shankar Subramanian",
         role: "News Letter Head",
-        imgurl: "assets/OB/Shankar.jpg",
+        imgurl: "assets/OB/Shankar.JPG",
         contact: "https://www.linkedin.com/in/shankars99/"),
     OfficeBearer(
         id: 11,
@@ -123,7 +123,7 @@ class _HomepageState extends State<Homepage> {
         id: 13,
         name: "Sushrut Vinayak K",
         role: "Internship Training Coordinator",
-        imgurl: "assets/OB/sushrut.jpg",
+        imgurl: "assets/OB/Sushrut.jpg",
         contact: "https://www.linkedin.com/in/sushrut-vinayak-7323041b5/"),
     OfficeBearer(
         id: 14,
@@ -147,7 +147,7 @@ class _HomepageState extends State<Homepage> {
         id: 17,
         name: "Jeevesh Guha Natrajan",
         role: "Co-Chairman",
-        imgurl: "assets/OB/Jeevesh.jpg",
+        imgurl: "assets/OB/Jeevesh.JPG",
         contact: "https://instagram.com/jeevguha?r=nametag"),
     OfficeBearer(
         id: 18,
@@ -339,7 +339,7 @@ class _HomepageState extends State<Homepage> {
                       child: Center(
                         child: ClipRRect(
                             borderRadius: BorderRadius.circular(40),
-                            child: Image.asset("department_home.jpg")),
+                            child: Image.asset("assets/department_home.jpg")),
                       )
                       //  Center(child: Text("Horse"))
                       ),
